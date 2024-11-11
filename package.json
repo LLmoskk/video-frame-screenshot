@@ -1,6 +1,16 @@
 {
-  "name": "video-frame-screenshot",
-  "version": "0.0.0",
+  "name": "video-frame-capture",
+  "version": "0.0.1",
+  "private": false,
+  "repository": "https://github.com/LLmoskk/video-frame-capture",
+  "author": "LLmoskk <EMAIL>",
+  "description": "capture video frames by canvas",
+  "keywords": [
+    "video",
+    "frame",
+    "capture"
+  ],
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
