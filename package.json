@@ -2,7 +2,7 @@
   "name": "video-frame-screenshot",
   "version": "0.0.1",
   "private": false,
-  "repository": "https://github.com/LLmoskk/video-frame-capture",
+  "repository": "https://github.com/LLmoskk/video-frame-screenshot",
   "author": "LLmoskk <EMAIL>",
   "description": "capture video frames by canvas",
   "keywords": [
