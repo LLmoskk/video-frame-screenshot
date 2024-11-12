@@ -1,6 +1,6 @@
 {
   "name": "video-frame-screenshot",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "private": false,
   "repository": "https://github.com/LLmoskk/video-frame-screenshot",
   "author": "LLmoskk <EMAIL>",
@@ -28,15 +28,19 @@
   ],
   "scripts": {
     "build": "rslib build",
-    "dev": "rsbuild dev --open"
+    "dev": "rsbuild dev --open",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.1.0",
     "@rsbuild/plugin-react": "^1.0.7",
     "@rslib/core": "^0.0.16",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "^22.8.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "semantic-release": "^24.2.0",
     "typescript": "^5.6.3"
   },
   "dependencies": {
