@@ -15,11 +15,13 @@ jobs:
         uses: mateothegreat/action-release@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: LLmoskk
+          owner: hjy2000111
           repo: video-frame-screenshot
           increment: patch
           branch: main
           release_notes: true
+          committer_name: ${{ github.actor }}
+          committer_email: 1398145450@qq.com
       - name: Print the current and next version using outputs
         uses: actions/checkout@v2
         with:
