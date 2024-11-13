@@ -1,31 +1,25 @@
-name: release
+name: Release
 on:
   push:
     branches:
-      - main
-permissions:
-  contents: write
-
+      - master
 jobs:
   release:
-    name: Perform a semantic release
-    runs-on: ubuntu-latest
+    name: Release
+    runs-on: ubuntu-18.04
     steps:
-      - name: action-release
-        uses: mateothegreat/action-release@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: hjy2000111
-          repo: video-frame-screenshot
-          increment: patch
-          branch: main
-          release_notes: true
-          committer_name: ${{ github.actor }}
-          committer_email: 1398145450@qq.com
-      - name: Print the current and next version using outputs
+      - name: Checkout
         uses: actions/checkout@v2
         with:
-          owner: mateothegreat
-          repo: action-release
-          current_version: ${{ steps.release.outputs.current_version }}
-          next_version: ${{ steps.release.outputs.next_version }}
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install dependencies
+        run: npm ci
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
