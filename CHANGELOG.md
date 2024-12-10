@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/LLmoskk/video-frame-screenshot/compare/v1.0.0...v1.0.1) (2024-12-10)
+
+
+### Bug Fixes
+
+* build error ([459bc2e](https://github.com/LLmoskk/video-frame-screenshot/commit/459bc2e91cb5ddfca82c89c12d7f44d0f7f4b1a8))
+* ts path error ([2d1198c](https://github.com/LLmoskk/video-frame-screenshot/commit/2d1198c3cad51217f60cb624c744cc5c7d4e0848))
+
 # 1.0.0 (2024-11-13)
 
 
