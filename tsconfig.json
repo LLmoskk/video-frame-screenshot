@@ -12,5 +12,6 @@
     "useDefineForClassFields": true,
     "allowImportingTsExtensions": true
   },
-  "include": ["src", "example/index.tsx", "example/App.tsx", "example/env.d.ts"]
+  "include": ["src", "example"],
+  "exclude": ["example/**/*"]
 }
