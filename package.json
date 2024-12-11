@@ -28,6 +28,8 @@
   ],
   "scripts": {
     "build": "rslib build",
+    "build:example": "rsbuild build",
+    "preview:example": "rsbuild preview --open",
     "dev": "rsbuild dev --open",
     "semantic-release": "semantic-release"
   },
