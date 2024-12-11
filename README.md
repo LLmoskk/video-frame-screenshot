@@ -1,14 +1,14 @@
-# 视频帧捕获工具
+# Video Frame Capture Tool
 
-获取视频某一帧的截图
+A tool for capturing screenshots from specific frames of a video
 
-## 安装
+## Installation
 
 ```bash
   npm install video-frame-screenshot
 ```
 
-## 使用方法/示例
+## Usage/Examples
 
 ```react
 import { useState } from 'react';
@@ -47,9 +47,9 @@ const App = () => {
 };
 ```
 
-## API 参考
+## API Reference
 
-#### TS 类型
+#### TS Types
 
 ```typeScript
   type FrameCaptureResult = { blob: Blob; url: string } | null;
@@ -57,28 +57,28 @@ const App = () => {
 
 #### `captureFrame(file: File, time: number = 0): Promise<FrameCaptureResult>`
 
-从指定的视频文件中捕获指定时间的帧。
+Captures a frame from a video file at a specified time.
 
-| 参数   | 类型     | 描述                                                         |
-| :----- | :------- | :----------------------------------------------------------- |
-| `file` | `File`   | **必选** 视频文件（例如 `.mp4`、`.webm` 等），用于从中捕获帧 |
-| `time` | `number` | 指定捕获帧的时间（秒）。默认为 `0`（视频开始时）             |
+| Parameter | Type     | Description                                                  |
+| :-------- | :------- | :----------------------------------------------------------- |
+| `file`    | `File`   | **Required** Video file (e.g., `.mp4`) to capture frame from |
+| `time`    | `number` | Time in seconds to capture the frame. Defaults to `0` (start of video) |
 
 #### `captureFrameAtTimeRange(file: File, startTime: number, endTime: number): Promise<FrameCaptureResult | null>`
 
-在指定的时间范围内捕获视频的某一帧。如果视频的当前时间超出了 `endTime`，则返回 `null`。
+Captures a frame from a video within a specified time range. Returns `null` if the current video time exceeds `endTime`.
 
-| 参数        | 类型     | 描述                                                         |
+| Parameter   | Type     | Description                                                  |
 | :---------- | :------- | :----------------------------------------------------------- |
-| `file`      | `File`   | **必选** 视频文件（例如 `.mp4`、`.webm` 等），用于从中捕获帧 |
-| `startTime` | `number` | **必选** 开始时间（秒），从该时间开始捕获帧                  |
-| `endTime`   | `number` | **必选** 结束时间（秒），在该时间点捕获停止                  |
+| `file`      | `File`   | **Required** Video file (e.g., `.mp4`) to capture frame from |
+| `startTime` | `number` | **Required** Start time in seconds to begin frame capture     |
+| `endTime`   | `number` | **Required** End time in seconds where capture stops          |
 
 #### `downloadFrame(frame: FrameCaptureResult, filename: string = 'frame.png'): void`
 
-将捕获的帧下载为图像文件。
+Downloads the captured frame as an image file.
 
-| 参数       | 类型                 | 描述                                                         |
+| Parameter  | Type                 | Description                                                  |
 | :--------- | :------------------- | :----------------------------------------------------------- |
-| `frame`    | `FrameCaptureResult` | **必选** 视频文件（例如 `.mp4`、`.webm` 等），用于从中捕获帧 |
-| `filename` | `string`             | 下载的文件名（默认为 `frame.png`）                           |
+| `frame`    | `FrameCaptureResult` | **Required** The captured frame result to download           |
+| `filename` | `string`             | Filename for the downloaded file (defaults to `frame.png`)    |
